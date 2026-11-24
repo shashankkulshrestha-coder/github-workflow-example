@@ -1,0 +1,15 @@
+name: Timeout Example
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    timeout-minutes: 2
+
+    steps:
+      - name: Simulate Long Task
+        run: sleep 600
+
+
